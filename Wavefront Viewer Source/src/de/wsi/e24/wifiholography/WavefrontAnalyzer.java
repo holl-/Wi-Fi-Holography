@@ -125,7 +125,7 @@ public class WavefrontAnalyzer {
 		List<WavefrontPoint> points = new ArrayList<>();
 		List<PointLocation> fails = new ArrayList<>();
 		
-		for(int i = startIndex; i < endIndex; i++) {
+		for(int i = startIndex; i <= endIndex; i++) {
 			try {
 				Capture capture = recording.getCapture(i);
 				if(plotOnly) {

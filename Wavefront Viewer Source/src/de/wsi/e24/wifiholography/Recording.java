@@ -33,7 +33,7 @@ public abstract class Recording {
 			}
 		}
 		int maxF = max;
-		Platform.runLater(() -> captures.set(maxF));
+		Platform.runLater(() -> captures.set(maxF+1));
 	}
 
 	protected void load(InputStream in) throws IOException {
