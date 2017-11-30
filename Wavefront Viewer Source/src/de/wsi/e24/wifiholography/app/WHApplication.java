@@ -187,7 +187,7 @@ public class WHApplication extends Application implements Initializable, Request
 	
 	private void discoverRecordings() {
 		ObservableList<Recording> recordings = FXCollections.observableArrayList(rec -> new Observable[]{rec.getCaptures()});
-		Path path = isJar() ? Paths.get("").toAbsolutePath() : Paths.get("I:/Recordings").toAbsolutePath();
+		Path path = isJar() ? Paths.get("").toAbsolutePath() : Paths.get("E:/Recordings/Software Test").toAbsolutePath();
 		try {
 			recordings.addAll(Recordings.getRecordings(path));
 		} catch (IOException e) {
@@ -270,7 +270,9 @@ public class WHApplication extends Application implements Initializable, Request
 				+ "\n\nPut executable JAR next to wavefront files.\n"
 				+ "The following input files are supported."
 				+ "\n- Recording: file structure and .rec.zip"
-				+ "\n- Simulation: .mat");
+				+ "\n- Simulation: .mat"
+				+ "\n\nThis project is available on GitHub."
+				+ "\nhttps://github.com/holl-/Wi-Fi-Holography");
 		dialog.show();
 	}
 	
